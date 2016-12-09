@@ -35,7 +35,7 @@ ALLOWED_HOSTS = []
 
 
 
-
+ACCOUNT_ACTIVATION_DAYS = 7
 
 ROOT_URLCONF = 'my_demo.urls'
 
@@ -148,7 +148,7 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'my_demo'
+    'my_demo',
 )
 
 LANGUAGES = (
@@ -207,3 +207,16 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+# more settings see: http://django-registration-redux.readthedocs.org/en/latest/
+#---------------------------------------------------------
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.mxhichina.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'cy.chen@networkgrand.com'
+EMAIL_HOST_PASSWORD = 'xxxxxxxxxxxxxxxx' #todo cheange password after commit
+DEFAULT_FROM_EMAIL = 'cy.chen@networkgrand.com'
+#---------------------------------------------------------
