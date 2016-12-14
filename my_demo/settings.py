@@ -149,7 +149,9 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'my_demo',
+    'profiles',
 )
+AUTH_PROFILE_MODULE = 'profiles.UserProfile'
 
 LANGUAGES = (
     ## Customize this
